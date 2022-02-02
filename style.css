@@ -1,0 +1,75 @@
+body {
+  overflow: hidden;
+  background: radial-gradient(#333, black);
+}
+body,
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  user-select: none;
+}
+
+.modal {
+  position: absolute;
+  background: radial-gradient(closest-side, white, gray);
+  width: 600px;
+  height: 300px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 1;
+  pointer-events: initial;
+  transition: all 0.3s;
+}
+
+.modal-content {
+  border: 10px solid #333;
+  width: 500px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100px;
+  flex-direction: column;
+  color: #333;
+  font-family: fantasy;
+  letter-spacing: 4px;
+  overflow: hidden;
+  font-size: 27px;
+  box-shadow: inset 0 3px 14px 5px rgba(0, 0, 0, 0.4);
+}
+
+.score {
+  font-size: 20px;
+  margin-bottom: 10px;
+  font-family: Arial;
+  padding: 10px;
+}
+
+.modal-content button {
+  border: 0;
+  outline: none;
+  padding: 10px 0;
+  width: 100%;
+  background: #333;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: fantasy;
+  letter-spacing: 5px;
+  transition: all 0.3s;
+}
+
+.modal-content button:hover {
+  opacity: 0.9;
+  transform: scale(1.04);
+}
+
+.fadeModal {
+  opacity: 0;
+  pointer-events: none;
+}
